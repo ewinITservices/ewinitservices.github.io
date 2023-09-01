@@ -43,15 +43,6 @@ p {
     font-size: 12px; /* Increase font size for larger screens */
 }
 
-.confetti {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    pointer-events: none;
-}
-
-
 /* Add this style for the status button */
 .status-button {
   display: inline-block;
@@ -71,7 +62,6 @@ p {
 .status-button:hover {
   background-color: #0056b3;
 }
-
 
 
 /* Media queries for responsiveness */
