@@ -33,8 +33,10 @@ h6 {
     font-size: 12px; /* Increase font size for larger screens */
 }
 
+/*Success! Heading*/
 h3 {
     /*color: green;*/
+    font-family: 'Charm';
     font-size: 18px; /* Increase font size for larger screens */
 }
 
