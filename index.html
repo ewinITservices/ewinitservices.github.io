@@ -12,7 +12,9 @@
         <source src="success_ding.mp3" type="audio/mpeg">
         <source src="success_ding.ogg" type="audio/ogg">
         <source src="success_ding.wav" type="audio/wav">
-        Your browser does not support the audio element.
+		<source src="success_ding.aac" type="audio/aac">
+		<!-- M4A format source -->
+		<source src="success_ding.m4a" type="audio/mp4">
     </audio>
 	
 	<script>
@@ -22,10 +24,17 @@
                 var canPlayMp3 = audio.canPlayType('audio/mpeg');
                 var canPlayOgg = audio.canPlayType('audio/ogg');
                 var canPlayWav = audio.canPlayType('audio/wav');
+				var canPlayAac = audio.canPlayType('audio/aac');
+				var canPlayM4a = audio.canPlayType('audio/mp4');
+				
                 if (canPlayMp3 === "probably" || (canPlayMp3 === "maybe" && (canPlayOgg !== "probably" && canPlayWav !== "probably"))) {
                     audio.src = "success_ding.mp3";
                 } else if (canPlayOgg === "probably" || (canPlayOgg === "maybe" && canPlayWav !== "probably")) {
                     audio.src = "success_ding.ogg";
+                } else if (canPlayAac === "probably" || (canPlayAac === "maybe" && canPlayM4a !== "probably")) {
+                    audio.src = "success_ding.aac";
+                } else if (canPlayM4a === "probably" || (canPlayM4a === "maybe" && canPlayWav !== "probably")) {
+                    audio.src = "success_ding.m4a";
                 } else if (canPlayWav === "probably") {
                     audio.src = "success_ding.wav";
                 } else {
