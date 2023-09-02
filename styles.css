@@ -36,8 +36,7 @@ h6 {
 /*Success! Heading*/
 h3 {
     /*color: green;*/
-    font-family: 'Charm';
-    font-size: 26px; /* Increase font size for larger screens */
+    font-size: 18px; /* Increase font size for larger screens */
 }
 
 p {
