@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode Switcher</title>
+    <style>
+        /* Common styles for both light and dark modes */
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Light mode styles */
+        .light-mode {
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        /* Button styles */
+        .mode-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <button id="theme-switcher" class="mode-switch">Switch to Dark Mode</button>
+
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
+
+        themeSwitcher.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                themeSwitcher.textContent = 'Switch to Light Mode';
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                themeSwitcher.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
